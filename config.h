@@ -83,9 +83,9 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 #ifdef LIGHT_THEME
-#include "light.h"
+#include "themes/light.h"
 #else
-#include "dark.h"
+#include "themes/dark.h"
 #endif
 
 /*
