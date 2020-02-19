@@ -1,38 +1,44 @@
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#3b4252", /* black   */
-	"#bf616a", /* red     */
-	"#a3be8c", /* green   */
-	"#ebcb8b", /* yellow  */
-	"#81a1c1", /* blue    */
-	"#b48ead", /* magenta */
-	"#88c0d0", /* cyan    */
-	"#e5e9f0", /* white   */
 
-	/* 8 bright colors */
-	"#4c566a", /* black   */
-	"#bf616a", /* red     */
-	"#a3be8c", /* green   */
-	"#ebcb8b", /* yellow  */
-	"#81a1c1", /* blue    */
-	"#b48ead", /* magenta */
-	"#8fbcbb", /* cyan    */
-	"#eceff4", /* white   */
+  /* 8 normal colors */
+  [0] = "#191919", /* black   */
+  [1] = "#993a20", /* red     */
+  [2] = "#9fbc12", /* green   */
+  [3] = "#fb7e14", /* yellow  */
+  [4] = "#003b6e", /* blue    */
+  [5] = "#67247e", /* magenta */
+  [6] = "#36b4ac", /* cyan    */
+  [7] = "#e6e6e6", /* white   */
 
-	[255] = 0,
+  /* 8 bright colors */
+  [8]  = "#282828", /* black   */
+  [9]  = "#f45720", /* red     */
+  [10] = "#daf658", /* green   */
+  [11] = "#ffb935", /* yellow  */
+  [12] = "#1e649f", /* blue    */
+  [13] = "#c456e5", /* magenta */
+  [14] = "#7aefde", /* cyan    */
+  [15] = "#ffffff", /* white   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#eeeeee", /* background */
-	"#333333", /* foreground */
+  /* special colors */
+  [256] = "#e6e6e6", /* background */
+  [257] = "#191919", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 256;
+unsigned int defaultfg  = 257;
+unsigned int defaultbg  = 256;
+unsigned int defaultcs  = 257;
+unsigned int defaultrcs = 256;
+
+/*
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
+ */
+unsigned int defaultitalic = 7;
+unsigned int defaultunderline = 7;
