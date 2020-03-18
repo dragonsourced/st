@@ -82,11 +82,7 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-#ifdef LIGHT_THEME
-#include "themes/light.h"
-#else
-#include "themes/dark.h"
-#endif
+#include "theme.h"
 
 /*
  * Default shape of cursor
