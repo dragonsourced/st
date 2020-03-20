@@ -19,11 +19,11 @@ static const char *colorname[] = {
   [12] = "#1e649f", /* blue    */
   [13] = "#c456e5", /* magenta */
   [14] = "#7aefde", /* cyan    */
-  [15] = "#ffffff", /* white   */
+  [15] = "#f5f5f5", /* white   */
 
   /* special colors */
-  [256] = "#f5f5f5", /* foreground */
-  [257] = "#191919", /* background */
+  [256] = "#f5f5f5", /* background */
+  [257] = "#191919", /* foreground */
 };
 
 /*
