@@ -1,11 +1,18 @@
 /* See LICENSE file for copyright and license details. */
 
+#ifndef THEME
+#define THEME "NULL"
+#define FONT "monospace"
+#define BGCOLOR "#191919"
+#define FGCOLOR "#f5f5f5"
+#endif
+
 /*
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "GoMono Nerd Font:size=10";
+static char *font = FONT;
 static int borderpx = 20;
 
 /*
@@ -81,12 +88,6 @@ char *termname = "st-256color";
  *	stty tabs
  */
 unsigned int tabspaces = 8;
-
-#ifndef THEME
-#define THEME "NULL"
-#define BGCOLOR "#191919"
-#define FGCOLOR "#f5f5f5"
-#endif
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
