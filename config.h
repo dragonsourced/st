@@ -13,7 +13,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = FONT;
-static int borderpx = 20;
+static int borderpx = 10;
 
 /*
  * What program is execed by st depends of these precedence rules:
